@@ -13,11 +13,12 @@ Terraform module which creates "VPC,EC2,security group" resources on AWS.
 
 Usage
 
-
-`"module "module1" {
+`
+module "module1" {
     source = "../module1"
     instance_type = "t2.micro"
     ami = "ami-052cef05d01020f1d"
+
     vpc_cidr = "10.0.1.0/24"
     subnets_cidr = "10.0.1.0/24"
     user_data_script = <<EOF
@@ -29,8 +30,8 @@ Usage
       sudo echo -e "FROM centos\nRUN yum install httpd -y\nCOPY index.html /var/www/html\nCMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]\nEXPOSE 80" > /sp/dockerfile
       sudo docker build -t sam /sp/
       sudo docker run -itd -p80:80 sam bash 
-      EOF    
-}"`
+      EOF
+}`
 
 
 
