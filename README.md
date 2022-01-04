@@ -13,7 +13,7 @@ Terraform module which creates "VPC,EC2,security group" resources on AWS.
 
 Usage
 
-
+```
 module "module1" {
     source = "../module1"
     
@@ -34,5 +34,5 @@ module "module1" {
       EOF
 }
 
-
+```
 
