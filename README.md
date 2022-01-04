@@ -14,7 +14,7 @@ Terraform module which creates "VPC,EC2,security group" resources on AWS.
 Usage
 
 
-`module "module1" {
+`"module "module1" {
     source = "../module1"
     instance_type = "t2.micro"
     ami = "ami-052cef05d01020f1d"
@@ -30,7 +30,7 @@ Usage
       sudo docker build -t sam /sp/
       sudo docker run -itd -p80:80 sam bash 
       EOF    
-}`
+}"`
 
 
 
