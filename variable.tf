@@ -9,7 +9,7 @@ variable "instance_type" {
 }
 
 variable "aws_key" {
-    default = "swamiraj12"
+    
   
 }
 

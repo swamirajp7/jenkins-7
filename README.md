@@ -5,9 +5,6 @@
 
 Terraform module which creates "VPC,EC2,security group" resources on AWS.
 
-This is
-
-
 
 
 ## **Usage**
@@ -18,18 +15,16 @@ module "module1" {
     
     instance_type = "t2.micro"
     ami = "ami-052cef05d01020f1d"
-
-    vpc_cidr = "10.0.1.0/24"
+    aws_key = "sam-key"
+    vpc_cidr = "10.0.0.0/16"
     subnets_cidr = "10.0.1.0/24"
     user_data_script = <<EOF
       #!/bin/sh  
-      sudo amazon-linux-extras install docker
-      sudo service docker start
-      sudo mkdir /sp
-      sudo echo "This is website" > /sp/index.html
-      sudo echo -e "FROM centos\nRUN yum install httpd -y\nCOPY index.html /var/www/html\nCMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]\nEXPOSE 80" > /sp/dockerfile
-      sudo docker build -t sam /sp/
-      sudo docker run -itd -p80:80 sam bash 
+      sudo yum update -y
+      sudo yum install httpd -y
+      sudo systemctl start httpd
+      sudo echo "This is website" > /var/www/html/index.html
+      chmod 777 /var/www/html/index.html
       EOF
 }
 
