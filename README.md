@@ -1,8 +1,7 @@
-**AWS EC2-VPC Security Group Terraform module
-**
+#AWS EC2-VPC Security Group Terraform module
 
 
-**Features**
+##**Features**
 
 Terraform module which creates "VPC,EC2,security group" resources on AWS.
 
@@ -11,7 +10,7 @@ Terraform module which creates "VPC,EC2,security group" resources on AWS.
 
 
 
-**Usage**
+##**Usage**
 
 ```
 module "module1" {
