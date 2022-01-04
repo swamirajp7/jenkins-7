@@ -15,7 +15,7 @@ Usage
 
 ```
 module "module1" {
-    source = "../module1"
+    source = "swamirajp7/terraform-aws-EC2-VPC"
     
     instance_type = "t2.micro"
     ami = "ami-052cef05d01020f1d"
