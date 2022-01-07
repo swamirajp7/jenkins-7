@@ -30,3 +30,16 @@ module "module1" {
 
 ```
 
+## **Inputs**
+
+| Name	  | Description |
+| ------------- | ------------- |
+| instance_type  | The type of instance to start  |
+| vpc_cidr  | The CIDR block for the VPC.  |
+| azs | A list of availability zones names or ids in the region |
+| ami | ID of AMI to use for the instance |
+| aws_key | Key name of the Key Pair to use for the instance |
+| subnets_cidr | Thr CIDR block for the subnet |
+| user_data_script | The user data to provide when launching the instance. |
+
+
